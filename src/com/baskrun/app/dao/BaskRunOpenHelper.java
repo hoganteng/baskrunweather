@@ -12,21 +12,21 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BaskRunOpenHelper extends SQLiteOpenHelper{
 	//省表
 	public static final String CREATE_PROVINCE="CREATE TABLE Province ("
-			+"[id] INTEGER PRIMARY KEY AUTOINCREMENT,"
-			+"[province_name] VARCHAR,"
-			+"[province_code] VARCHAR)";
+			+"id INTEGER PRIMARY KEY AUTOINCREMENT,"
+			+"province_name VARCHAR,"
+			+"province_code VARCHAR)";
 	//市表
 	public static final String CREATE_CITY="CREATE TABLE City ("
-			+"[id] INTEGER PRIMARY KEY AUTOINCREMENT,"
-			+"[city_name] VARCHAR,"
-			+"[city_code] VARCHAR)"
-			+"[province_id] INTEGER)";		
+			+"id INTEGER PRIMARY KEY AUTOINCREMENT,"
+			+"city_name VARCHAR,"
+			+"city_code VARCHAR,"
+			+"province_id INTEGER)";		
 	//县表
 	public static final String CREATE_COUNTY="CREATE TABLE County ("
-			+"[id] INTEGER PRIMARY KEY AUTOINCREMENT,"
-			+"[county_name] VARCHAR,"
-			+"[county_code] VARCHAR)"
-			+"[city_id] INTEGER)";	
+			+"id INTEGER PRIMARY KEY AUTOINCREMENT,"
+			+"county_name VARCHAR,"
+			+"county_code VARCHAR,"
+			+"city_id INTEGER)";	
 
 	public BaskRunOpenHelper(Context context, String name, CursorFactory factory, int version) {
 		super(context, name, factory, version);
